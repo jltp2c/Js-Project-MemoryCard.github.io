@@ -71,6 +71,7 @@ function counting(){
        Tentatives : ${scoring} (pour rejouer "espace")
     </h2>
     `
+      
    }
 }
 
@@ -83,7 +84,9 @@ document.addEventListener("keydown", (e)=>{
 
     score.innerHTML = `<h2>
     Tentatives : ${scoring}</h2> (pour rejouer "espace")`;
-
+    cartes.forEach(cards =>{
+        cards.addEventListener("click", flippedCard)
+    });
 setTimeout(() => {
     randomIMG()
 }, 1500);
