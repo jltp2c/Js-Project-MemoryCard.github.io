@@ -87,8 +87,10 @@ document.addEventListener("keydown", (e)=>{
     cartes.forEach(cards =>{
         cards.addEventListener("click", flippedCard)
     });
+    locked=true;
 setTimeout(() => {
     randomIMG()
 }, 1500);
+      locked=false; 
 
 })
